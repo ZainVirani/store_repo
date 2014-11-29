@@ -54,6 +54,9 @@ int main(){
 	else{
 		if(strcmp(inputP, password)==0){
 			printf("<p>Login successful! Welcome, %s!\n</p>", name);
+			printf("<form action = \"catalogue.html\">");
+			printf("<input type = \"hidden\" name = \"Username\" value = %s><br>", inputU);
+			printf("</form>");
 			printf("<meta http-equiv=\"refresh\" content=\"1; catalogue.html\">");
 		}
 		else{

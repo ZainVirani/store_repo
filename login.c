@@ -46,7 +46,7 @@ int main(){
 	}
 	else{
 		if(strcmp(inputP, password)==0){
-			printf("Login successful. Welcome, %s!\n", name);
+			printf("Login successful! Welcome, %s!\n", name);
 		}
 		else{
 			printf("Username or password is incorrect.\n");

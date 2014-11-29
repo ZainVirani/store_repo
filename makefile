@@ -1,6 +1,6 @@
-login : login.o
-	gcc -o login login.o
-	chmod a+rx login
+login.cgi : login.o
+	gcc -o login.cgi login.o
+	chmod a+rx login.cgi
 login.o : login.c clean
 	gcc -c login.c
 clean : 

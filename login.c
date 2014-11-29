@@ -17,17 +17,24 @@ void getfields(char* line){
 	password = token;
 }
 int main(){
-	char inputUser[4096]={'\0'};
-	char inputPass[4096]={'\0'};
+	char *inputs;
 	char *inputU;
 	char *inputP;
 	int found = 0;
-	printf("Enter your username: ");
-	gets(inputUser);
-	printf("Enter your password: ");
-	gets(inputPass);
-	inputU=inputUser;
-	inputP=inputPass;
+	printf("Content-type: text/html\n\n");
+	printf("<head>");
+	inputs = getenv("QUERY_STRING");
+	if(inputs == NULL)
+		printf("<p>Error: no data passed to script.</p>");
+	else{
+		char *token;
+		token = strtok(inputs, "=");
+		token = strtok(NULL, "&");
+		inputU = token;
+		token = strtok(NULL, "=");
+		token = strtok(NULL, "&");
+		inputP = token;
+	}
 	FILE* fileR = fopen("Members.csv", "r");
 	while(!feof(fileR)){ //while end of file has not been reached
 		fgets(data, 4096, fileR); //read line
@@ -41,18 +48,21 @@ int main(){
 	}
 	fclose(fileR); //close file
 	if(found==0){
-		printf("Username or password is incorrect.\n");
-		exit;
+		printf("<p>Username or password is incorrect.\n</p>");
+		printf("<meta http-equiv=\"refresh\" content=\"1; error.html\">");
 	}
 	else{
 		if(strcmp(inputP, password)==0){
-			printf("Login successful! Welcome, %s!\n", name);
+			printf("<p>Login successful! Welcome, %s!\n</p>", name);
+			printf("<meta http-equiv=\"refresh\" content=\"1; catalogue.html\">");
 		}
 		else{
-			printf("Username or password is incorrect.\n");
-			exit;
+			printf("<p>Username or password is incorrect.\n</p>");
+			printf("<meta http-equiv=\"refresh\" content=\"1; error.html\">");
+			
 		}
-	}		
+	}
+	printf("</head>");
 }
 
 

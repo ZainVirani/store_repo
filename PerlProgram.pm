@@ -1,3 +1,3 @@
-#!usr/local/bin/pel
+#!usr/local/bin/perl
 
 

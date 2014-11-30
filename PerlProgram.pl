@@ -1,21 +1,31 @@
 #!/usr/loca/bin/perl
-use CGI
+use CGI;
+my $q = new CGI;
 use strict;
 
-my $username = param('username');
-my $name = param('name');
-my $password = param('password');
+my $username = $q->param('username');
+my $name = $q->param('name');
+my $password = $q->param('password');
 my @array = ("$name", "$username", "$password");
 my $line = join(' , ', @array);
 
 
-$file = 'Members.csv'
-open(FILE, '+>>$file') or die "Cannot open file";
+my $file = 'Members.csv';
+open (FILE, '+>>$file') or die "Cannot open file";
 my $inputLine = <INPUT>;
 while($line = <INPUT>)
 {
 	if(index($line, "$username") != -1) {
-	#Link to error HTML page
+	print "Content-type: text/html\n\n";
+	print "<HTML>\n";
+	print "<HEAD>\n";
+	print "<TITLE> Error Page </TITLE> \n";
+	print "</HEAD>\n";
+	print "<BODY>\n";
+	print "The username you have entered is already in use.";
+	print "<br><a href=\"http//www.cs.mcgill.ca\">Home Page</a> \n";
+	print "<br><a href=\"http://www.cs.mcgill.ca\">Registration Page</a> \n";
+	print "</BODY>\n";
 	close(FILE)
 	}
 	else {

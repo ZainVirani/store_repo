@@ -1,12 +1,12 @@
 #!/usr/loca/bin/perl
-use CGI;
-my $q = new CGI;
+use CGI::Compile;
+my $q = CGI::Compile->compile("./register.cgi");
 use strict;
 
 my $username = $q->param('username');
 my $name = $q->param('name');
 my $password = $q->param('password');
-my @array = ("$name", "$username", "$password");
+my @array = ("$name", "$username", "$password", "\n");
 my $line = join(' , ', @array);
 
 

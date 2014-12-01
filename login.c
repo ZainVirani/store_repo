@@ -24,7 +24,7 @@ int main(){
 	int a=0;
 	int found = 0;
 	printf("Content-type: text/html\n\n");
-	printf("<head>");
+	printf("<html>");
 	int n = atoi(getenv("CONTENT_LENGTH"));
 	while((c=getchar())!=EOF && a<n){
 		if(a<8192){
@@ -34,8 +34,11 @@ int main(){
 		}
 	}
 	inputs[a]='\0';
-	if(inputs == NULL)
+	if(inputs == NULL){
 		printf("<p>Error: no data passed to script.</p>");
+		printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
+		printf("</html>");
+	}
 	else{
 		char *token;
 		token = strtok(inputs, "=");
@@ -60,22 +63,25 @@ int main(){
 	if(found==0){
 		printf("<p>Username or password is incorrect.\n</p>");
 		printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
+		printf("</html>");
 	}
 	else{
 		if(strcmp(inputP, password)==0){
 			printf("<p>Login successful! Welcome, %s!\n</p>", name);
 			FILE* fileW = fopen("LoggedIn.csv", "a");
-			fprintf(fileW, "%s", inputU);
+			fprintf(fileW, "\n%s\n", inputU);
 			fclose(fileW);
-			printf("<form action = \"catalogue.html\">");
-			printf("<input type = \"hidden\" name = \"Username\" value = %s><br>", inputU);
+			printf("<body onload=\"submitForm()\">");
+			printf("<form action = \"catalogue.html\" method = \"post\" name=\"myForm\" id=\"myForm\">");
+			printf("<input id=\"username\" type = \"hidden\" name = \"username\" value = \"%s\"><br>", inputU);
 			printf("</form>");
-			printf("<meta http-equiv=\"refresh\" content=\"0; catalogue.html\">");
+			printf("<script type='text/javascript'>document.myForm.submit();</script>");
+			printf("</body>");
 		}
 		else{
 			printf("<p>Username or password is incorrect.\n</p>");
 			printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
-			
+			printf("</html>");
 		}
 	}
 	printf("</head>");

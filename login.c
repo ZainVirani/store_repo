@@ -17,13 +17,23 @@ void getfields(char* line){
 	password = token;
 }
 int main(){
-	char *inputs;
+	char inputs[8192];
 	char *inputU;
 	char *inputP;
+	char c;
+	int a=0;
 	int found = 0;
 	printf("Content-type: text/html\n\n");
 	printf("<head>");
-	inputs = getenv("QUERY_STRING");
+	int n = atoi(getenv("CONTENT_LENGTH"));
+	while((c=getchar())!=EOF && a<n){
+		if(a<8192){
+			if(c!='+') inputs[a]=c;
+			else inputs[a]=' ';
+			a++;
+		}
+	}
+	inputs[a]='\0';
 	if(inputs == NULL)
 		printf("<p>Error: no data passed to script.</p>");
 	else{
@@ -49,19 +59,22 @@ int main(){
 	fclose(fileR); //close file
 	if(found==0){
 		printf("<p>Username or password is incorrect.\n</p>");
-		printf("<meta http-equiv=\"refresh\" content=\"1; error.html\">");
+		printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
 	}
 	else{
 		if(strcmp(inputP, password)==0){
 			printf("<p>Login successful! Welcome, %s!\n</p>", name);
+			FILE* fileW = fopen("LoggedIn.csv", "a");
+			fprintf(fileW, "%s", inputU);
+			fclose(fileW);
 			printf("<form action = \"catalogue.html\">");
 			printf("<input type = \"hidden\" name = \"Username\" value = %s><br>", inputU);
 			printf("</form>");
-			printf("<meta http-equiv=\"refresh\" content=\"1; catalogue.html\">");
+			printf("<meta http-equiv=\"refresh\" content=\"0; catalogue.html\">");
 		}
 		else{
 			printf("<p>Username or password is incorrect.\n</p>");
-			printf("<meta http-equiv=\"refresh\" content=\"1; error.html\">");
+			printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
 			
 		}
 	}

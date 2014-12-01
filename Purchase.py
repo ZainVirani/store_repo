@@ -1,3 +1,6 @@
+#!/usr/bin/python
+print ("Content-type:text/html\n")
+
 bill=[]
 
 print("Please input the product numbers you wish to purchase")

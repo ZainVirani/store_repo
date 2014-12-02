@@ -9,11 +9,11 @@ my $password = $q->param('password');
 my @array = ($name, $username, $password, "\r");
 my $line = join(' , ', @array);
 
-print "Content-type: text/html \n\n";
+print "Content-type:text/html\n\n";
 my $file = 'Members.csv';
 open (FILE, '+>>$file') or die "Cannot open file";
-my $inputLine = <INPUT>;
-while($line = <INPUT>)
+my $inputLine = <FILE>;
+while($inputLine = <FILE>)
 {
 	if(index($line, $username) != 4){
 	print "<HTML>\n";
@@ -29,9 +29,9 @@ while($line = <INPUT>)
 	}
 	else {
 #seeking to the end of the file to append
-seek(PTR, 0, 2);
-print PTR $line;
+seek(FILE, 0, 2);
+print FILE $line;
 }
 }
-close(PTR);
+close(FILE);
 

@@ -20,21 +20,7 @@
       </nav>
     </header>
     <section>
-	<script type='text/javascript'>
-		var data = new XMLHttpRequest();
-		data.open("GET", Inventory.csv, true);
-		data.onreadstatechange = function()
-		{
-			if(data.readyState===4)
-			{
-				if(data.status===200 || data.status==0)
-				{
-					var invText=data.responseText;
-				}
-			}
-		}
-		data.send(null);
-	</script>
+	
       <ul>
         <li>
           <center>

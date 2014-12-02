@@ -9,16 +9,18 @@ my $password = $q->param('password');
 my @array = ($name, $username, $password, "\r");
 my $line = join(' , ', @array);
 
-print "Content-type:text/html\n\n";
+print "Content-type: text/html\n\n";
 my $file = 'Members.csv';
-open (FILE, '+>>$file') or die "Cannot open file";
+open (FILE, '+>>$file') or die "Cannot open file $!";
+flock(FILE, 2) or die;
+seek(FILE, 0, 0);
 my $inputLine = <FILE>;
 while($inputLine = <FILE>)
 {
 	if(index($line, $username) != 4){
 	print "<HTML>\n";
 	print "<HEAD>\n";
-	print "<TITLE> Error Page </TITLE> \n";
+	print "<TITLE> Error Page </TITLE>\n";
 	print "</HEAD>\n";
 	print "<BODY>\n";
 	print "The username you have entered is already in use.";

@@ -11,11 +11,11 @@ my $line = join(' , ', @array);
 
 print "Content-type: text/html\n\n";
 my $file = 'Members.csv';
-open (FILE, "+>>$file") or die "Cannot open file $!";
-flock(FILE, 2) or die;
+open(FILE, "+>>$file") or die "Cannot open file $!";
+flock(FILE, 2);
 seek(FILE, 0, 0);
 my $inputLine = <FILE>;
-while($inputLine = <FILE>)
+while(<FILE>)
 {
 	if(index($line, $username) != 4){
 	print "<HTML>\n";

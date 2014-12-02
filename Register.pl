@@ -11,12 +11,8 @@ my $line = join(' , ', @array);
 
 print "Content-type: text/html\n\n";
 my $file = 'Members.csv';
-<<<<<<< HEAD
-open (FILE, "+>>$file") or die "Cannot open file";
-=======
-open (FILE, "+>>$file") or die "Cannot open file $!";
-flock(FILE, 2) or die;
->>>>>>> d44cd9fce3901983739b499b77dd304018861569
+open(FILE, "+>>$file") or die "Cannot open file $!";
+flock(FILE, 2);
 seek(FILE, 0, 0);
 my $inputLine = <FILE>;
 while(<FILE>)

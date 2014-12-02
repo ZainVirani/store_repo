@@ -1,4 +1,4 @@
-#!/usr/loca/bin/perl
+#!/usr/local/bin/perl
 use CGI;
 my $q = CGI->new();
 use strict;

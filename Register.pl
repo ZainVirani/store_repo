@@ -13,7 +13,7 @@ print "Content-type:text/html\n\n";
 my $file = 'Members.csv';
 open (FILE, '+>>$file') or die "Cannot open file";
 my $inputLine = <FILE>;
-while($line = <FILE>)
+while($inputLine = <FILE>)
 {
 	if(index($line, $username) != 4){
 	print "<HTML>\n";

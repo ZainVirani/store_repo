@@ -1,4 +1,4 @@
-#!/usr/loca/bin/perl
+#!/usr/local/bin/perl
 use CGI;
 my $q = CGI->new();
 use strict;
@@ -11,9 +11,10 @@ my $line = join(' , ', @array);
 
 print "Content-type:text/html\n\n";
 my $file = 'Members.csv';
-open (FILE, '+>>$file') or die "Cannot open file";
+open (FILE, "+>>$file") or die "Cannot open file";
+seek(FILE, 0, 0);
 my $inputLine = <FILE>;
-while($inputLine = <FILE>)
+while(<FILE>)
 {
 	if(index($line, $username) != 4){
 	print "<HTML>\n";
@@ -25,7 +26,7 @@ while($inputLine = <FILE>)
 	print "<br><a href=\"index.html\">Home Page</a> \n";
 	print "<br><a href=\"register.html\">Registration Page</a> \n";
 	print "</BODY>\n";
-	close(FILE)
+	close(FILE);
 	}
 	else {
 #seeking to the end of the file to append

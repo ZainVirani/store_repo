@@ -25,7 +25,7 @@ while($inputLine = <FILE>)
 	print "<br><a href=\"index.html\">Home Page</a> \n";
 	print "<br><a href=\"register.html\">Registration Page</a> \n";
 	print "</BODY>\n";
-	close(FILE)
+	close(FILE);
 	}
 	else {
 #seeking to the end of the file to append

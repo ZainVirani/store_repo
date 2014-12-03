@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+
+#perl file for registration page
 use CGI;
 my $q = CGI->new();
 use strict;

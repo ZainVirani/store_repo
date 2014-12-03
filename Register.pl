@@ -7,32 +7,31 @@ use warnings;
 my $username = $q->param('username');
 my $name = $q->param('name');
 my $password = $q->param('password');
-my @array = ($name, $username, $password, " ");
+my @array = ($name, $username, $password, "");
 my $line = join(',', @array);
 
 print "Content-type: text/html\n\n";
 my $file = 'Members.csv';
 open(my $csv, '+<', $file) or die "Cannot open file";
-my $inputLine = <$csv>;
+my $inputLine=<$csv>;
+my $found=0;
 #checking if username is already in use.
-	while($inputLine =<$csv>){
-	if(index($inputLine, $username) != -1){
-	print "<HTML>\n";
-	print "<HEAD>\n";
-	print "<TITLE> Error Page </TITLE>\n";
-	print "</HEAD>\n";
-	print "<BODY>\n";
-	print "<br><br><br><br>\n";
-	print "<center>The username you have entered is already in use.</center>";
-	print "<br><center><a href=\"index.html\">Home Page</a></center< \n";
-	print "<br><center><a href=\"register.html\">Registration Page</a></center> \n";
-	print "</BODY>\n";
-	$inputLine=<$csv>;
-
-close($csv)
-}
-
-else{
+	while($inputLine=<$csv>){
+		if(index($inputLine, $username) != -1){
+			$found=1;
+			print "<HTML>\n";
+			print "<HEAD>\n";
+			print "<TITLE> Error Page </TITLE>\n";
+			print "</HEAD>\n";
+			print "<BODY>\n";
+			print "<br><br><br><br>\n";
+			print "<center>The username you have entered is already in use.</center>";
+			print "<br><center><a href=\"index.html\">Home Page</a></center< \n";
+			print "<br><center><a href=\"register.html\">Registration Page</a></center> \n";
+			print "</BODY>\n";
+		}
+	}
+if($found=0){
 #seeking to the end of the file to append if username is not in use
 seek($csv, 0, 2);
 print $csv "$line\n";
@@ -44,6 +43,5 @@ print "<br><br><br><br>\n";
 print "<b><center>Congratulations. You have made an account!</center></b>";
 print "<br><center><a href=\"login.html\">Click here to login.</center></a> \n";
 print "</BODY>\n";
+}
 close($csv);
-}
-}

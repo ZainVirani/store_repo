@@ -7,8 +7,6 @@ print "Content-Type: text/html"
 print
 
 print "<TITLE>CGI script output</TITLE>"
-print "<H1>This is my first CGI script</H1>"
-print "Hello, world!"
 
 bill=[]
 # item = a list that contains the checked items of catalogue.html 

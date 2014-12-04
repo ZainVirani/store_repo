@@ -23,4 +23,4 @@ def show_bill():
   for item in bill:
     print(item)
   
-show_list()
+show_bill()

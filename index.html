@@ -15,7 +15,10 @@
            <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="http://cs.mcgill.ca/~zviran1/catalogue.html">Catalogue</a>
+	<form action="catalogue.cgi" id="my_form" method = "post">
+            <a href="javascript:;" onclick="document.getElementById('my_form').submit();">Catalogue</a>
+	    <input type="hidden" name="username" value="">
+	</form>
           </li>
           <li>
             <a href="http://cs.mcgill.ca/~zviran1/login.html">Login</a>

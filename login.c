@@ -69,10 +69,10 @@ int main(){
 		if(strcmp(inputP, password)==0){
 			printf("<p>Login successful! Welcome, %s!\n</p>", name);
 			FILE* fileW = fopen("LoggedIn.csv", "a");
-			fprintf(fileW, "\n%s\n", inputU);
+			fprintf(fileW, "%s,\n", inputU);
 			fclose(fileW);
 			printf("<body onload=\"submitForm()\">");
-			printf("<form action = \"catalogue.html\" method = \"post\" name=\"myForm\" id=\"myForm\">");
+			printf("<form action = \"catalogue.cgi\" method = \"post\" name=\"myForm\" id=\"myForm\">");
 			printf("<input id=\"username\" type = \"hidden\" name = \"username\" value = \"%s\"><br>", inputU);
 			printf("</form>");
 			printf("<script type='text/javascript'>document.myForm.submit();</script>");

@@ -6,24 +6,30 @@
   <body>
     <header>
       <a href="index.html">
-        <center><h1>Barack Merchandise</h1>
+        <center><h1 class="blue">Barack Merchandise</h1>
         <h2>We Sell Pictures of Obama</h2></center>
       </a>
       <nav>
         <ul>
           <li>
-           <a href="index.html">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li>
-            <a href="http://cs.mcgill.ca/~zviran1/catalogue.html">Catalogue</a>
+	<form action="catalogue.cgi" id="my_form" method = "post">
+            <a href="javascript:;" onclick="document.getElementById('my_form').submit();">Catalogue</a>
+	    <input type="hidden" name="username" value="">
+	</form>
           </li>
           <li>
-            <a href="http://cs.mcgill.ca/~zviran1/login.html">Login</a>
+            <a href="login.html">Login</a>
           </li>
           <li>
-            <a href="http://cs.mcgill.ca/~zviran1/register.html">Register</a>
+            <a href="register.html">Register</a>
           </li>
-        </ul>
+          <li>
+            <a href="Purchase.py">PythonTest</a>
+          </li>
+	</ul>
       </nav>
     </header>
     <section>
@@ -41,3 +47,4 @@
     </footer>
   </body>
 </html>
+

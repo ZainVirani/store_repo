@@ -1,37 +1,11 @@
-#!/usr/bin/python
-print "Content-Type: text/html"
-print
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
-print "<TITLE>CGI script output</TITLE>"
-print "<H1>This is my first CGI script</H1>"
-print "Hello, world!"
-
+# enable debugging
 import cgitb
 cgitb.enable()
 
+print "Content-Type: text/plain;charset=utf-8"
+print
 
-bill=[]
-
-print("Please input the product numbers you wish to purchase")
-
-def add_to_list(item):
-  bill.append(item)
-  print("Added! List has {} items.".format(len(bill)))
-  
-def show_list():
-  print("Here's your list")
-  for item in bill:
-    print(item)
-    
-while True:
-  new_item = input("> ")
-  if new_item == 'DONE':
-    break
-  elif new_item == 'SHOW':
-    show_list()
-    continue
-  
-  add_to_list(new_item)
-  continue 
-  
-show_list()
+print "Hello World!"

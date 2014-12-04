@@ -2,3 +2,10 @@ name,username,password,
 Zain Virani,zvir,zain123,
 Alex Ruddock,arud,alex123,
 Joanna Ambros,jamb,joan123,
+<<<<<<< HEAD
+12,jambros,hi, 
+=======
+him,him,him, 
+Zain Virani,zman1696,quicksilver, 
+new,newnew,123, 
+>>>>>>> c5420513dace90463f09698d693615aedfe458ec

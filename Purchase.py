@@ -1,4 +1,8 @@
 #!/usr/bin/python
+import cgi
+import cgitb
+cgitb.enable()
+
 print "Content-Type: text/html"
 print
 
@@ -6,8 +10,7 @@ print "<TITLE>CGI script output</TITLE>"
 print "<H1>This is my first CGI script</H1>"
 print "Hello, world!"
 
-import cgitb
-cgitb.enable()
+
 
 
 bill=[]
@@ -24,7 +27,7 @@ def show_list():
     print(item)
     
 while True:
-  new_item = input("> ")
+  new_item = input""
   if new_item == 'DONE':
     break
   elif new_item == 'SHOW':

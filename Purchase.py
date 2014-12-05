@@ -13,7 +13,15 @@ def main():
 	else:
 		print "<h1>Error! Sign in.</h1>"
 		
-	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+	baby = 0
+	firm = 0
+	funny = 0
+	ganja = 0
+	huh = 0
+	pointer = 0
+	rasta = 0
+	skeptic = 0
+	wave = 0
 	
 	
 	inventory = []

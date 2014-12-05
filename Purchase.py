@@ -32,15 +32,7 @@ def main():
 			line = (line.split(","))
 			inventory.append(int(line[1]))
 
-		if ((inventory[1]-int(baby))>=0)and
-		((inventory[2]-int(firm))>=0)and
-		((inventory[3]-int(funny))>=0)and
-		((inventory[4]-int(ganja))>=0)
-		((inventory[5]-int(huh))>=0)and
-		((inventory[6]-int(pointer))>=0)and
-		((inventory[7]-int(rasta))>=0)and
-		((inventory[8]-int(skeptic))>=0)and
-		((inventory[9]-int(wave))>=0):
+		if ((inventory[1]-int(baby))>=0)and((inventory[2]-int(firm))>=0)and((inventory[3]-int(funny))>=0)and((inventory[4]-int(ganja))>=0)and((inventory[5]-int(huh))>=0)and((inventory[6]-int(pointer))>=0)and((inventory[8]-int(skeptic))>=0)and((inventory[9]-int(wave))>=0):
 			line1 = 'baby,'+str(inventory[1]-int(baby))+',20\n'
 			line2 = 'firm,'+str(inventory[2]-int(firm))+',20\n'
 			line3 = 'funny,'+str(inventory[3]-int(funny))+',20\n'

@@ -5,25 +5,37 @@ import csv
 
 def main():
 	print "Content-type: text/html\n"
-	form = cgi.FieldStorage() # parse query
-	#if form.has_key("firstname") and form["firstname"].value != "":
-	#		print "<h1>Hello", form["firstname"].value, "</h1>"
-	#else:
-	#	print "<h1>Error! Please enter first name.</h1>"
+	form = cgi.FieldStorage()
+	if form.has_key("username") and form["username"].value != "":
+			print "<h1>Hello", form["username"].value, "</h1>"
+	else:
+		print "<h1>Error! Please enter first name.</h1>"
+		
+	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0
+	
 	
 	inventory = []
-	baby = form.getvalue("baby")
-	firm = form.getvalue("firm")
-	funny = form.getvalue("funny")
-	ganja = form.getvalue("ganja")
-	huh = form.getvalue("huh")
-	pointer = form.getvalue("pointer")
-	rasta = form.getvalue("rasta")
-	skeptic = form.getvalue("skeptic")
-	wave = form.getvalue("wave")
+	if form.getvalue("baby") = "on":
+		baby = form.getvalue("bbaby")
+	if form.getvalue("firm") = "on":
+		firm = form.getvalue("bfirm")
+	if form.getvalue("funny") = "on":
+		funny = form.getvalue("bfunny")
+	if form.getvalue("ganja") = "on":
+		ganja = form.getvalue("bganja")
+	if form.getvalue("huh") = "on":
+		huh = form.getvalue("bhuh")
+	if form.getvalue("pointer") = "on":
+		pointer = form.getvalue("bpointer")
+	if form.getvalue("rasta") = "on":
+		rasta = form.getvalue("brasta")
+	if form.getvalue("skeptic") = "on":
+		skeptic = form.getvalue("bskeptic")
+	if form.getvalue("wave") = "on":
+		wave = form.getvalue("bwave")
 	content = ""
 
-	if form.has_key("loggedin"):
+	if form.has_key("username"):
 		print asdfasdf
 
 

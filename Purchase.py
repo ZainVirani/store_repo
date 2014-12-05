@@ -5,25 +5,37 @@ import csv
 
 def main():
 	print "Content-type: text/html\n"
-	form = cgi.FieldStorage() # parse query
-	#if form.has_key("firstname") and form["firstname"].value != "":
-	#		print "<h1>Hello", form["firstname"].value, "</h1>"
-	#else:
-	#	print "<h1>Error! Please enter first name.</h1>"
+	form = cgi.FieldStorage()
+	if form.has_key("username") and form["username"].value != "":
+			print "<h1>Hello", form["username"].value, "</h1>"
+	else:
+		print "<h1>Error! Sign in.</h1>"
+		
+	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+	
 	
 	inventory = []
-	baby = form.getvalue("baby")
-	firm = form.getvalue("firm")
-	funny = form.getvalue("funny")
-	ganja = form.getvalue("ganja")
-	huh = form.getvalue("huh")
-	pointer = form.getvalue("pointer")
-	rasta = form.getvalue("rasta")
-	skeptic = form.getvalue("skeptic")
-	wave = form.getvalue("wave")
+	if form.getvalue("baby") = "on":
+		baby = form.getvalue("bbaby")
+	if form.getvalue("firm") = "on":
+		firm = form.getvalue("bfirm")
+	if form.getvalue("funny") = "on":
+		funny = form.getvalue("bfunny")
+	if form.getvalue("ganja") = "on":
+		ganja = form.getvalue("bganja")
+	if form.getvalue("huh") = "on":
+		huh = form.getvalue("bhuh")
+	if form.getvalue("pointer") = "on":
+		pointer = form.getvalue("bpointer")
+	if form.getvalue("rasta") = "on":
+		rasta = form.getvalue("brasta")
+	if form.getvalue("skeptic") = "on":
+		skeptic = form.getvalue("bskeptic")
+	if form.getvalue("wave") = "on":
+		wave = form.getvalue("bwave")
 	content = ""
 
-	if form.has_key("loggedin"):
+	if form.has_key("username"):
 		print asdfasdf
 
 
@@ -32,15 +44,7 @@ def main():
 			line = (line.split(","))
 			inventory.append(int(line[1]))
 
-		if ((inventory[1]-int(baby))>=0)and
-		((inventory[2]-int(firm))>=0)and
-		((inventory[3]-int(funny))>=0)and
-		((inventory[4]-int(ganja))>=0)
-		((inventory[5]-int(huh))>=0)and
-		((inventory[6]-int(pointer))>=0)and
-		((inventory[7]-int(rasta))>=0)and
-		((inventory[8]-int(skeptic))>=0)and
-		((inventory[9]-int(wave))>=0):
+		if ((inventory[1]-int(baby))>=0)and((inventory[2]-int(firm))>=0)and((inventory[3]-int(funny))>=0)and((inventory[4]-int(ganja))>=0)and((inventory[5]-int(huh))>=0)and((inventory[6]-int(pointer))>=0)and((inventory[8]-int(skeptic))>=0)and((inventory[9]-int(wave))>=0):
 			line1 = 'baby,'+str(inventory[1]-int(baby))+',20\n'
 			line2 = 'firm,'+str(inventory[2]-int(firm))+',20\n'
 			line3 = 'funny,'+str(inventory[3]-int(funny))+',20\n'
@@ -61,24 +65,24 @@ def main():
 			print "	<body>"
 			print "  <p>"
 			print "  <b>BILL</b><br>"
-			if form.has_key("loggedin"):
+			if form.has_key("username"):
 		                print "asdfasdf"
 			print "  ============================<br>"
-			print "	 B Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
+			print "	 B-Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
 			print "  B Firm * " + str(firm) + " = $" + str(20*(int(firm)))+ "<br>"
 			print "	 B Funny * " + str(funny) + "  = $" + str(20*(int(funny))) + "<br>"
-			print "  B Herb * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
-			print "	 B Huh * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
-			print "  B Pointed * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
-			print "	 B Rasta * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
-			print "  B Skeptic * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
-			print "	 B Wave * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
+			print "  B Ganja? * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
+			print "	 Huh? * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
+			print "  2 the Point * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
+			print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
+			print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
+			print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
 			print "  ============================<br>"
 			print "  <b>TOTAL : $" + str((20*(int(baby)))+(20*(int(firm)))+(20*(int(funny)))+(20*(int(ganja)))+(20*(int(huh)))+(20*(int(pointer)))+(20*(int(rasta)))+(20*(int(skeptic)))+(20*(int(wave))))+ " CND</b><br>" 
 			print "  THANK YOU FOR YOUR PURCHASE"
 			print "  </p>"
-			print "  To go back to Home page : " + '<a href="http://cs.mcgill.ca/~jlee299/index.html">Home</a><br>'
-			print "  To go back to Catalogue page : " + '<a href="http://cs.mcgill.ca/~jlee299/index.html">Catalogue</a>'
+			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+			print "  To go back to Catalogue page : " + '<a href="catalogue.html">Catalogue</a>'
 			print " </body>"
 			print "</html>"
 		else:

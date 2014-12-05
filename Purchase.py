@@ -11,7 +11,7 @@ def main():
 	else:
 		print "<h1>Error! Please enter first name.</h1>"
 		
-	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0
+	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 	
 	
 	inventory = []

@@ -26,6 +26,11 @@ int main(){
 	printf("Content-type: text/html\n\n");
 	printf("<html>");
 	int n = atoi(getenv("CONTENT_LENGTH"));
+	if(n==0){
+                printf("<p>Error: no data passed to script.</p>");
+                printf("<meta http-equiv=\"refresh\" content=\"0; error.html\">");
+                printf("</html>");
+        }
 	while((c=getchar())!=EOF && a<n){
 		if(a<8192){
 			if(c!='+') inputs[a]=c;

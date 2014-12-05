@@ -5,14 +5,13 @@
     <title>Barack Bro</title>
 	<script type="text/javascript">
 
-            document.getElementById('info').onsubmit = function()
-            {
-                if (!this.u.value)
+            function check(){
+                if (!info.u.value)
                 {
                     alert ("Please Enter a Username and Password");
                     return false;
                 }
-		if (!this.p.value)
+		if (!info.p.value)
 		{
 		    alert ("Please Enter a Username and Password");
 		    return false;
@@ -27,7 +26,7 @@
        <center> <h2>Home</h2></center>
       </a>
     </header>
-	<form action="login.cgi" method="post" name="info" id="info">
+	<form action="login.cgi" method="post" name="info" id="info" onsubmit="return check(this)">
 		Username: <input type = "text" name = "Username" value = "" name="u" id="u"><br>
 		Password: <input type = "password" name = "Password" value = "" name="p" id="p"><br>
 		<input type = "submit" value = "Log In">

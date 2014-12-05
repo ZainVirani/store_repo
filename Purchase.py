@@ -17,23 +17,23 @@ def main():
 	
 	
 	inventory = []
-	if form.getvalue("baby") = "on":
+	if form.getvalue("baby") == "on":
 		baby = form.getvalue("bbaby")
-	if form.getvalue("firm") = "on":
+	if form.getvalue("firm") == "on":
 		firm = form.getvalue("bfirm")
-	if form.getvalue("funny") = "on":
+	if form.getvalue("funny") == "on":
 		funny = form.getvalue("bfunny")
-	if form.getvalue("ganja") = "on":
+	if form.getvalue("ganja") == "on":
 		ganja = form.getvalue("bganja")
-	if form.getvalue("huh") = "on":
+	if form.getvalue("huh") == "on":
 		huh = form.getvalue("bhuh")
-	if form.getvalue("pointer") = "on":
+	if form.getvalue("pointer") == "on":
 		pointer = form.getvalue("bpointer")
-	if form.getvalue("rasta") = "on":
+	if form.getvalue("rasta") == "on":
 		rasta = form.getvalue("brasta")
-	if form.getvalue("skeptic") = "on":
+	if form.getvalue("skeptic") == "on":
 		skeptic = form.getvalue("bskeptic")
-	if form.getvalue("wave") = "on":
+	if form.getvalue("wave") == "on":
 		wave = form.getvalue("bwave")
 	content = ""
 

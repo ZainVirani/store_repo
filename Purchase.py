@@ -65,24 +65,24 @@ def main():
 			print "	<body>"
 			print "  <p>"
 			print "  <b>BILL</b><br>"
-			if form.has_key("loggedin"):
+			if form.has_key("username"):
 		                print "asdfasdf"
 			print "  ============================<br>"
-			print "	 B Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
+			print "	 B-Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
 			print "  B Firm * " + str(firm) + " = $" + str(20*(int(firm)))+ "<br>"
 			print "	 B Funny * " + str(funny) + "  = $" + str(20*(int(funny))) + "<br>"
-			print "  B Herb * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
-			print "	 B Huh * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
-			print "  B Pointed * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
-			print "	 B Rasta * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
-			print "  B Skeptic * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
-			print "	 B Wave * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
+			print "  B Ganja? * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
+			print "	 Huh? * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
+			print "  2 the Point * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
+			print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
+			print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
+			print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
 			print "  ============================<br>"
 			print "  <b>TOTAL : $" + str((20*(int(baby)))+(20*(int(firm)))+(20*(int(funny)))+(20*(int(ganja)))+(20*(int(huh)))+(20*(int(pointer)))+(20*(int(rasta)))+(20*(int(skeptic)))+(20*(int(wave))))+ " CND</b><br>" 
 			print "  THANK YOU FOR YOUR PURCHASE"
 			print "  </p>"
-			print "  To go back to Home page : " + '<a href="http://cs.mcgill.ca/~jlee299/index.html">Home</a><br>'
-			print "  To go back to Catalogue page : " + '<a href="http://cs.mcgill.ca/~jlee299/index.html">Catalogue</a>'
+			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+			print "  To go back to Catalogue page : " + '<a href="catalogue.html">Catalogue</a>'
 			print " </body>"
 			print "</html>"
 		else:

@@ -2,6 +2,8 @@
 import re
 import cgi
 import csv
+import cgitb
+cgitb.enable()
 
 def main():
 	print "Content-type: text/html\n"

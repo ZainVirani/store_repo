@@ -53,23 +53,28 @@ def main():
 
 			content = line1+line2+line3+line4+line5+line6+line7+line8+line9
 			#print content
-			with open ('../database/Inventory.scv', 'w') as wf:
+			with open ('Inventory.csv', 'w') as wf:
 				wf.write(content)
 			wf.close
 			print "<html>"
-			print"	<head><title>Monopoly - Bill</title></head>"
+			print"	<head><title>Barack Pics - Bill</title></head>"
 			print "	<body>"
 			print "  <p>"
 			print "  <b>BILL</b><br>"
 			if form.has_key("loggedin"):
 		                print "asdfasdf"
 			print "  ============================<br>"
-			print "	 One Monpoly Dollar * " + str(one_order) + "  = $" + str(1*(int(one_order))) + "<br>"
-			print "  Five Monopoly Dollars * " + str(five_order) + " = $" + str(5*(int(five_order)))+ "<br>"
-			print "  Ten Monopoly Dollars * " + str(ten_order) + " = $" + str(10*(int(ten_order))) + "<br>"
-			print "  Twenty Monopoly Dollars * " + str(twenty_order) + " = $" + str(20*(int(twenty_order))) + "<br>"
+			print "	 B Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
+			print "  B Firm * " + str(firm) + " = $" + str(20*(int(firm)))+ "<br>"
+			print "	 B Funny * " + str(funny) + "  = $" + str(20*(int(funny))) + "<br>"
+			print "  B Herb * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
+			print "	 B Huh * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
+			print "  B Pointed * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
+			print "	 B Rasta * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
+			print "  B Skeptic * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
+			print "	 B Wave * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
 			print "  ============================<br>"
-			print "  <b>TOTAL : $" + str((1*(int(one_order)))+(5*(int(five_order)))+(10*(int(ten_order)))+(20*(int(twenty_order))))+ " CND</b><br>" 
+			print "  <b>TOTAL : $" + str((20*(int(baby)))+(20*(int(firm)))+(20*(int(funny)))+(20*(int(ganja)))+(20*(int(huh)))+(20*(int(pointer)))+(20*(int(rasta)))+(20*(int(skeptic)))+(20*(int(wave))))+ " CND</b><br>" 
 			print "  THANK YOU FOR YOUR PURCHASE"
 			print "  </p>"
 			print "  To go back to Home page : " + '<a href="http://cs.mcgill.ca/~jlee299/index.html">Home</a><br>'

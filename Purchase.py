@@ -9,7 +9,7 @@ def main():
 	if form.has_key("username") and form["username"].value != "":
 			print "<h1>Hello", form["username"].value, "</h1>"
 	else:
-		print "<h1>Error! Please enter first name.</h1>"
+		print "<h1>Error! Sign in.</h1>"
 		
 	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 	

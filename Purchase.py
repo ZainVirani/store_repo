@@ -98,26 +98,26 @@ def main():
 			print "  <b>TOTAL : $" + str( (20*(baby)) + (20*(firm)) + (20*(funny)) + (20*(ganja)) + (20*(huh)) + (20*(pointer)) + (20*(rasta)) + (20*(skeptic)) + (20*(wave)) )+ " CND</b><br>" 
 			print "  THANK YOU FOR YOUR PURCHASE"
 			print "  You have been logged out successfully after your purchase.<br>"
-				print "  Login again if you want to place another order.<br>"
-				print "  </p>"
-				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-				print "  To go back to Login page : " + '<a href="login.html" target="_blank">Login</a><br>'
-				print " </body>"
-				print "</html>"
-			else:
-				print "<html>"
-				print " <head><title>Error</title></head>"
-				print " <body>"
-				print "  <p>"
-				print "  Our apologies. It seems we're out of inventory.<br>"
-				print "  You have been logged out automatically.<br>"
-				print "  Please login again in order to place an order<br>"
-				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-				print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
-				print "  </p>"
-				print " </body>"
-				print "</html>"
-		f.close()
+			print "  Login again if you want to place another order.<br>"
+			print "  </p>"
+			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+			print "  To go back to Login page : " + '<a href="login.html" target="_blank">Login</a><br>'
+			print " </body>"
+			print "</html>"
+		else:
+			print "<html>"
+			print " <head><title>Error</title></head>"
+			print " <body>"
+			print "  <p>"
+			print "  Our apologies. It seems we're out of inventory.<br>"
+			print "  You have been logged out automatically.<br>"
+			print "  Please login again in order to place an order<br>"
+			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+			print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
+			print "  </p>"
+			print " </body>"
+			print "</html>"
+	f.close()
 	
 	else:
 		print "<html>"

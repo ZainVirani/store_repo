@@ -117,7 +117,7 @@ def main():
 			print "  </p>"
 			print " </body>"
 			print "</html>"
-	f.close()
+		f.close()
 	
 	else:
 		print "<html>"

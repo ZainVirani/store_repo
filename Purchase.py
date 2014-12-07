@@ -17,7 +17,7 @@ def main():
 		for line in logd:
 			line = line.strip()
 			userz.append(line)
-		if (form.has_key("username") and str(form["username"].value) in userz):
+		if (form.has_key("username1") and str(form["username1"].value) in userz):
 			log = True
 	
 	if (log == True):

@@ -125,10 +125,10 @@ def main():
 		print " <body>"
 		print "  <p>"
 		print "  Please login if you wish to buy stuff.<br>"
-		print "  If you have not yet registered, please do so, if you are an existing member please login. <br>"
-		print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-		print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
-		print "  To go back to Registeration page : " + '<a href="registeration.html">Register</a><br>'
+		print "  If you have not yet registered, please do so. <br>"
+		print "  Main : " + '<a href="index.html">Home</a><br>'
+		print "  To Login : " + '<a href="login.html">Login</a><br>'
+		print "  To Register : " + '<a href="registration.html">Register</a><br>'
 		print " </body>"
 		print "</html>"
 	

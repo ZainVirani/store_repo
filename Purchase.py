@@ -21,39 +21,39 @@ def main():
 			log = True
 	
 	if (log == True):
-		if ((form.has_key("bbaby")) and (form["bbaby"].value !="0") and (form.has_key("baby")) and (form["baby"].value !="off")):
+		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):
 			baby = int(form.getvalue("bbaby"))
 		else:
 			baby = 0
-		if ((form.has_key("bfirm")) and (form["bfirm"].value !="0") and (form.has_key("firm")) and (form["firm"].value !="off")):
+		if ((form.has_key("bfirm")) and (form["bfirm"].value !="") and (form.has_key("firm")) and (form["firm"].value !="")):
 			firm = int(form.getvalue("bfirm"))
 		else:
 			firm = 0
-		if ((form.has_key("bfunny")) and (form["bfunny"].value !="0") and (form.has_key("funny")) and (form["funny"].value !="off")):
+		if ((form.has_key("bfunny")) and (form["bfunny"].value !="") and (form.has_key("funny")) and (form["funny"].value !="")):
 			funny = int(form.getvalue("bfunny"))
 		else:
 			funny = 0
-		if ((form.has_key("bganja")) and (form["bganja"].value !="0") and (form.has_key("ganja")) and (form["ganja"].value !="off")):
+		if ((form.has_key("bganja")) and (form["bganja"].value !="") and (form.has_key("ganja")) and (form["ganja"].value !="")):
 			ganja = int(form.getvalue("bganja"))
 		else:
 			ganja = 0
-		if ((form.has_key("bhuh")) and (form["bhuh"].value !="0") and (form.has_key("huh")) and (form["huh"].value !="")):
+		if ((form.has_key("bhuh")) and (form["bhuh"].value !="") and (form.has_key("huh")) and (form["huh"].value !="")):
 			huh = int(form.getvalue("bhuh"))
 		else:
 			huh = 0
-		if ((form.has_key("bpointer")) and (form["bpointer"].value !="0") and (form.has_key("pointer")) and (form["pointer"].value !="off")):
+		if ((form.has_key("bpointer")) and (form["bpointer"].value !="") and (form.has_key("pointer")) and (form["pointer"].value !="")):
 			pointer = int(form.getvalue("bpointer"))
 		else:
 			pointer = 0
-		if ((form.has_key("brasta")) and (form["brasta"].value !="0") and (form.has_key("rasta")) and (form["rasta"].value !="off")):
+		if ((form.has_key("brasta")) and (form["brasta"].value !="") and (form.has_key("rasta")) and (form["rasta"].value !="")):
 			rasta = int(form.getvalue("brasta"))
 		else:
 			rasta = 0
-		if ((form.has_key("bskeptic")) and (form["bskeptic"].value !="0") and (form.has_key("skeptic")) and (form["skeptic"].value !="off")):
+		if ((form.has_key("bskeptic")) and (form["bskeptic"].value !="") and (form.has_key("skeptic")) and (form["skeptic"].value !="")):
 			skeptic = int(form.getvalue("bskeptic"))
 		else:
 			skeptic = 0
-		if ((form.has_key("bwave")) and (form["bwave"].value !="0") and (form.has_key("wave")) and (form["wave"].value !="off")):
+		if ((form.has_key("bwave")) and (form["bwave"].value !="") and (form.has_key("wave")) and (form["wave"].value !="")):
 			wave = int(form.getvalue("bwave"))
 		else:
 			wave = 0	

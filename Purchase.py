@@ -10,7 +10,7 @@ def main():
 	form = cgi.FieldStorage()
 	inventory = []
 	content = ""
-	log = True
+	log = False
 	
 	with open ('LoggedIn.csv', 'r') as logd:
 		userz = []

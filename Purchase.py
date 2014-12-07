@@ -63,16 +63,16 @@ def main():
 				line = (line.split(","))
 				inventory.append(int(line[1]))
 
-			if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
-				line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
-				line2 = 'firm,'+str(inventory[2]-(firm))+',20\n'
-				line3 = 'funny,'+str(inventory[3]-(funny))+',20\n'
-				line4 = 'ganja,'+str(inventory[4]-(ganja))+',20\n'
-				line5 = 'huh,'+str(inventory[5]-(huh))+',20\n'
-				line6 = 'pointer,'+str(inventory[6]-(pointer))+',20\n'
-				line7 = 'rasta,'+str(inventory[7]-(rasta))+',20\n'
-				line8 = 'skeptic,'+str(inventory[8]-(skeptic))+',20\n'
-				line9 = 'wave,'+str(inventory[9]-(wave))+',20\n'
+			if ((inventory[0]-(baby))>=0)and((inventory[1]-(firm))>=0)and((inventory[2]-(funny))>=0)and((inventory[3]-(ganja))>=0)and((inventory[4]-(huh))>=0)and((inventory[5]-(pointer))>=0)and((inventory[6]-(rasta))>=0)and((inventory[7]-(skeptic))>=0)and((inventory[8]-(wave))>=0):
+				line1 = 'baby,'+str(inventory[0]-(baby))+',20\n'
+				line2 = 'firm,'+str(inventory[1]-(firm))+',20\n'
+				line3 = 'funny,'+str(inventory[2]-(funny))+',20\n'
+				line4 = 'ganja,'+str(inventory[3]-(ganja))+',20\n'
+				line5 = 'huh,'+str(inventory[4]-(huh))+',20\n'
+				line6 = 'pointer,'+str(inventory[5]-(pointer))+',20\n'
+				line7 = 'rasta,'+str(inventory[6]-(rasta))+',20\n'
+				line8 = 'skeptic,'+str(inventory[7]-(skeptic))+',20\n'
+				line9 = 'wave,'+str(inventory[8]-(wave))+',20\n'
 
 				content = line1+line2+line3+line4+line5+line6+line7+line8+line9
 		

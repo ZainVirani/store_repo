@@ -10,14 +10,14 @@ def main():
 	form = cgi.FieldStorage()
 	inventory = []
 	content = ""
-	log = False
+	log = True
 	
 	with open ('LoggedIn.csv', 'r') as logd:
 		userz = []
 		for line in logd:
 			line = line.strip()
 			userz.append(line)
-		if (form.has_key("username") and str(form["username"].value) in userz):
+		if (form.has_key("username1") and str(form["username1"].value) in userz):
 			log = True
 	
 	if (log == True):
@@ -58,12 +58,12 @@ def main():
 		else:
 			wave = 0	
 
-		with open ('Inventory.csv', 'r') as fp:	
-			for line in fp:
+		with open ('Inventory.csv', 'r') as f:	
+			for line in f:
 				line = (line.split(","))
 				inventory.append(int(line[1]))
 
-			if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
+			if ((inventory[0]-(baby))>=0)and((inventory[1]-(firm))>=0)and((inventory[2]-(funny))>=0)and((inventory[3]-(ganja))>=0)and((inventory[4]-(huh))>=0)and((inventory[5]-(pointer))>=0)and((inventory[6]-(rasta))>=0)and((inventory[7]-(skeptic))>=0)and((inventory[8]-(wave))>=0):
 				line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
 				line2 = 'firm,'+str(inventory[2]-(firm))+',20\n'
 				line3 = 'funny,'+str(inventory[3]-(funny))+',20\n'
@@ -129,6 +129,9 @@ def main():
 		print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
 		print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
 		print "  To go back to Registeration page : " + '<a href="registration.html">Register</a><br>'
+		print "  Main : " + '<a href="index.html">Home</a><br>'
+		print "  To Login : " + '<a href="login.html">Login</a><br>'
+		print "  To Register : " + '<a href="registration.html">Register</a><br>'
 		print " </body>"
 		print "</html>"
 	

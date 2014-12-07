@@ -58,10 +58,6 @@ def main():
 		else:
 			wave = 0	
 
-	with open ('Inventory.csv', 'r') as fp:	
-		for line in fp:
-			line = (line.split(","))
-			inventory.append(int(line[2]))
 		with open ('Inventory.csv', 'r') as fp:	
 			for line in fp:
 				line = (line.split(","))
@@ -129,10 +125,10 @@ def main():
 		print " <body>"
 		print "  <p>"
 		print "  Please login if you wish to buy stuff.<br>"
-		print "  If you have not yet registered, please do so, if you are an existing member please login. <br>"
+		print "  If you have not yet registered, please do so. <br>"
 		print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
 		print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
-		print "  To go back to Registeration page : " + '<a href="registeration.html">Register</a><br>'
+		print "  To go back to Registeration page : " + '<a href="registration.html">Register</a><br>'
 		print " </body>"
 		print "</html>"
 	

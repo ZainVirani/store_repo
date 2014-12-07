@@ -3,6 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Barack Bro</title>
+	<script type="text/javascript">
+
+            function check(){
+                if (!info.u.value)
+                {
+                    alert ("Please Enter a Username and Password");
+                    return false;
+                }
+		if (!info.p.value)
+		{
+		    alert ("Please Enter a Username and Password");
+		    return false;
+		}
+            }
+
+        </script>
   </head>
   <body>
     <header>
@@ -10,9 +26,9 @@
        <center> <h2>Home</h2></center>
       </a>
     </header>
-	<form action="login.cgi" method="post">
-		Username: <input type = "text" name = "Username" value = ""><br>
-		Password: <input type = "password" name = "Password" value = ""><br>
+	<form action="login.cgi" method="post" name="info" id="info" onsubmit="return check(this)">
+		Username: <input type = "text" name = "Username" value = "" name="u" id="u"><br>
+		Password: <input type = "password" name = "Password" value = "" name="p" id="p"><br>
 		<input type = "submit" value = "Log In">
 	</form>
 	<p> Click "Log In" to log in. You will be redirected to the Catalogue.</p>

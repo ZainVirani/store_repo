@@ -2,6 +2,8 @@
 import re
 import cgi
 import csv
+import cgitb
+cgitb.enable()
 
 def main():
 	print "Content-type: text/html\n"
@@ -11,27 +13,35 @@ def main():
 	else:
 		print "<h1>Error! Sign in.</h1>"
 		
-	baby, firm, funny, ganja, huh, pointer, rasta, skeptic, wave = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+	baby = 0
+	firm = 0
+	funny = 0
+	ganja = 0
+	huh = 0
+	pointer = 0
+	rasta = 0
+	skeptic = 0
+	wave = 0
 	
 	
 	inventory = []
-	if form.getvalue("baby") = "on":
+	if form.getvalue("baby") == "on":
 		baby = form.getvalue("bbaby")
-	if form.getvalue("firm") = "on":
+	if form.getvalue("firm") == "on":
 		firm = form.getvalue("bfirm")
-	if form.getvalue("funny") = "on":
+	if form.getvalue("funny") == "on":
 		funny = form.getvalue("bfunny")
-	if form.getvalue("ganja") = "on":
+	if form.getvalue("ganja") == "on":
 		ganja = form.getvalue("bganja")
-	if form.getvalue("huh") = "on":
+	if form.getvalue("huh") == "on":
 		huh = form.getvalue("bhuh")
-	if form.getvalue("pointer") = "on":
+	if form.getvalue("pointer") == "on":
 		pointer = form.getvalue("bpointer")
-	if form.getvalue("rasta") = "on":
+	if form.getvalue("rasta") == "on":
 		rasta = form.getvalue("brasta")
-	if form.getvalue("skeptic") = "on":
+	if form.getvalue("skeptic") == "on":
 		skeptic = form.getvalue("bskeptic")
-	if form.getvalue("wave") = "on":
+	if form.getvalue("wave") == "on":
 		wave = form.getvalue("bwave")
 	content = ""
 

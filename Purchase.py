@@ -8,65 +8,74 @@ cgitb.enable()
 def main():
 	print "Content-type: text/html\n"
 	form = cgi.FieldStorage()
-	if form.has_key("username") and form["username"].value != "":
-			print "<h1>Hello", form["username"].value, "</h1>"
-	else:
-		print "<h1>Error! Sign in.</h1>"
-		
-	baby = 0
-	firm = 0
-	funny = 0
-	ganja = 0
-	huh = 0
-	pointer = 0
-	rasta = 0
-	skeptic = 0
-	wave = 0
-	
-	
 	inventory = []
-	if form.getvalue("baby") == "on":
-		baby = form.getvalue("bbaby")
-	if form.getvalue("firm") == "on":
-		firm = form.getvalue("bfirm")
-	if form.getvalue("funny") == "on":
-		funny = form.getvalue("bfunny")
-	if form.getvalue("ganja") == "on":
-		ganja = form.getvalue("bganja")
-	if form.getvalue("huh") == "on":
-		huh = form.getvalue("bhuh")
-	if form.getvalue("pointer") == "on":
-		pointer = form.getvalue("bpointer")
-	if form.getvalue("rasta") == "on":
-		rasta = form.getvalue("brasta")
-	if form.getvalue("skeptic") == "on":
-		skeptic = form.getvalue("bskeptic")
-	if form.getvalue("wave") == "on":
-		wave = form.getvalue("bwave")
 	content = ""
+	log = False
+	
+	with open ('loggedin.csv', 'r') as logging:
+		users = []
+		for line in loggin:
+			line = line.strip()
+			users.append(line)
+		if (form.has_key("loggedin") and str(form["loggedin"].value) in users):
+			log = True
+	
+	if (log == True):
+		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):
+			baby = int(form.getvalue("bbaby"))
+		else:
+			baby = 0
+		if ((form.has_key("bfirm")) and (form["bfirm"].value !="") and (form.has_key("firm")) and (form["firm"].value !="")):
+			firm = int(form.getvalue("bfirm"))
+		else:
+			firm = 0
+		if ((form.has_key("bfunny")) and (form["bfunny"].value !="") and (form.has_key("funny")) and (form["funny"].value !="")):
+			funny = int(form.getvalue("bfunny"))
+		else:
+			funny = 0
+		if ((form.has_key("bganja")) and (form["bganja"].value !="") and (form.has_key("ganja")) and (form["ganja"].value !="")):
+			ganja = int(form.getvalue("bganja"))
+		else:
+			ganja = 0
+		if ((form.has_key("bhuh")) and (form["bhuh"].value !="") and (form.has_key("huh")) and (form["huh"].value !="")):
+			huh = int(form.getvalue("bhuh"))
+		else:
+			huh = 0
+		if ((form.has_key("bpointer")) and (form["bpointer"].value !="") and (form.has_key("pointer")) and (form["pointer"].value !="")):
+			pointer = int(form.getvalue("bpointer"))
+		else:
+			pointer = 0
+		if ((form.has_key("brasta")) and (form["brasta"].value !="") and (form.has_key("rasta")) and (form["rasta"].value !="")):
+			rasta = int(form.getvalue("brasta"))
+		else:
+			rasta = 0
+		if ((form.has_key("bskeptic")) and (form["bskeptic"].value !="") and (form.has_key("skeptic")) and (form["skeptic"].value !="")):
+			skeptic = int(form.getvalue("bskeptic"))
+		else:
+			skeptic = 0
+		if ((form.has_key("bwave")) and (form["bwave"].value !="") and (form.has_key("wave")) and (form["wave"].value !="")):
+			wave = int(form.getvalue("bwave"))
+		else:
+			wave = 0	
 
-	if form.has_key("username"):
-		print asdfasdf
-
-
-	with open ('Inventory.csv', 'r') as f:	
-		for line in f:
+	with open ('Inventory.csv', 'r') as fp:	
+		for line in fp:
 			line = (line.split(","))
 			inventory.append(int(line[1]))
 
-		if ((inventory[1]-int(baby))>=0)and((inventory[2]-int(firm))>=0)and((inventory[3]-int(funny))>=0)and((inventory[4]-int(ganja))>=0)and((inventory[5]-int(huh))>=0)and((inventory[6]-int(pointer))>=0)and((inventory[8]-int(skeptic))>=0)and((inventory[9]-int(wave))>=0):
-			line1 = 'baby,'+str(inventory[1]-int(baby))+',20\n'
-			line2 = 'firm,'+str(inventory[2]-int(firm))+',20\n'
-			line3 = 'funny,'+str(inventory[3]-int(funny))+',20\n'
-			line4 = 'ganja,'+str(inventory[4]-int(ganja))+',20\n'
-			line5 = 'huh,'+str(inventory[5]-int(huh))+',20\n'
-			line6 = 'pointer,'+str(inventory[6]-int(pointer))+',20\n'
-			line7 = 'rasta,'+str(inventory[7]-int(rasta))+',20\n'
-			line8 = 'skeptic,'+str(inventory[8]-int(skeptic))+',20\n'
-			line9 = 'wave,'+str(inventory[9]-int(wave))+',20\n'
+		if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
+			line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
+			line2 = 'firm,'+str(inventory[2]-(firm))+',20\n'
+			line3 = 'funny,'+str(inventory[3]-(funny))+',20\n'
+			line4 = 'ganja,'+str(inventory[4]-(ganja))+',20\n'
+			line5 = 'huh,'+str(inventory[5]-(huh))+',20\n'
+			line6 = 'pointer,'+str(inventory[6]-(pointer))+',20\n'
+			line7 = 'rasta,'+str(inventory[7]-(rasta))+',20\n'
+			line8 = 'skeptic,'+str(inventory[8]-(skeptic))+',20\n'
+			line9 = 'wave,'+str(inventory[9]-(wave))+',20\n'
 
 			content = line1+line2+line3+line4+line5+line6+line7+line8+line9
-			#print content
+		
 			with open ('Inventory.csv', 'w') as wf:
 				wf.write(content)
 			wf.close
@@ -75,27 +84,53 @@ def main():
 			print "	<body>"
 			print "  <p>"
 			print "  <b>BILL</b><br>"
-			if form.has_key("username"):
-		                print "asdfasdf"
 			print "  ============================<br>"
-			print "	 B-Baby * " + str(baby) + "  = $" + str(20*(int(baby))) + "<br>"
-			print "  B Firm * " + str(firm) + " = $" + str(20*(int(firm)))+ "<br>"
-			print "	 B Funny * " + str(funny) + "  = $" + str(20*(int(funny))) + "<br>"
-			print "  B Ganja? * " + str(ganja) + " = $" + str(20*(int(ganja)))+ "<br>"
-			print "	 Huh? * " + str(huh) + "  = $" + str(20*(int(huh))) + "<br>"
-			print "  2 the Point * " + str(pointer) + " = $" + str(20*(int(pointer)))+ "<br>"
-			print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(int(rasta))) + "<br>"
-			print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(int(skeptic)))+ "<br>"
-			print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(int(wave))) + "<br>"
+			print "	 B-Baby * " + str(baby) + "  = $" + str(20*(baby)) + "<br>"
+			print "  B Firm * " + str(firm) + " = $" + str(20*(firm))+ "<br>"
+			print "	 B Funny * " + str(funny) + "  = $" + str(20*(funny)) + "<br>"
+			print "  B Ganja? * " + str(ganja) + " = $" + str(20*(ganja))+ "<br>"
+			print "	 Huh? * " + str(huh) + "  = $" + str(20*(huh)) + "<br>"
+			print "  2 the Point * " + str(pointer) + " = $" + str(20*(pointer))+ "<br>"
+			print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(rasta)) + "<br>"
+			print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(skeptic))+ "<br>"
+			print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(wave)) + "<br>"
 			print "  ============================<br>"
-			print "  <b>TOTAL : $" + str((20*(int(baby)))+(20*(int(firm)))+(20*(int(funny)))+(20*(int(ganja)))+(20*(int(huh)))+(20*(int(pointer)))+(20*(int(rasta)))+(20*(int(skeptic)))+(20*(int(wave))))+ " CND</b><br>" 
+			print "  <b>TOTAL : $" + str( (20*(baby)) + (20*(firm)) + (20*(funny)) + (20*(ganja)) + (20*(huh)) + (20*(pointer)) + (20*(rasta)) + (20*(skeptic)) + (20*(wave)) )+ " CND</b><br>" 
 			print "  THANK YOU FOR YOUR PURCHASE"
-			print "  </p>"
-			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-			print "  To go back to Catalogue page : " + '<a href="catalogue.html">Catalogue</a>'
-			print " </body>"
-			print "</html>"
-		else:
-			print "Sorry! Out of inventory."
-	f.close()
+			print "  You have been logged out successfully after your purchase.<br>"
+				print "  Login again if you want to place another order.<br>"
+				print "  </p>"
+				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+				print "  To go back to Login page : " + '<a href="login.html" target="_blank">Login</a><br>'
+				print " </body>"
+				print "</html>"
+			else:
+				print "<html>"
+				print " <head><title>Error</title></head>"
+				print " <body>"
+				print "  <p>"
+				print "  Our apologies. It seems we're out of inventory.<br>"
+				print "  You have been logged out automatically.<br>"
+				print "  Please login again in order to place an order<br>"
+				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+				print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
+				print "  </p>"
+				print " </body>"
+				print "</html>"
+		f.close()
+	
+	else:
+		print "<html>"
+		print " <head><title>Error</title></head>"
+		print " <body>"
+		print "  <p>"
+		print "  Please login if you wish to buy stuff.<br>"
+		print "  If you have not yet registered, please do so, if you are an existing member please login. <br>"
+		print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+		print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
+		print "  To go back to Registeration page : " + '<a href="registeration.html">Register</a><br>'
+		print " </body>"
+		print "</html>"
+	
 main()
+

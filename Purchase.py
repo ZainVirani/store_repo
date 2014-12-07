@@ -58,8 +58,8 @@ def main():
 		else:
 			wave = 0	
 
-		with open ('Inventory.csv', 'r') as fp:	
-			for line in fp:
+		with open ('Inventory.csv', 'r') as f:	
+			for line in f:
 				line = (line.split(","))
 				inventory.append(int(line[1]))
 

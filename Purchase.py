@@ -63,61 +63,61 @@ def main():
 				line = (line.split(","))
 				inventory.append(int(line[1]))
 
-		if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
-			line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
-			line2 = 'firm,'+str(inventory[2]-(firm))+',20\n'
-			line3 = 'funny,'+str(inventory[3]-(funny))+',20\n'
-			line4 = 'ganja,'+str(inventory[4]-(ganja))+',20\n'
-			line5 = 'huh,'+str(inventory[5]-(huh))+',20\n'
-			line6 = 'pointer,'+str(inventory[6]-(pointer))+',20\n'
-			line7 = 'rasta,'+str(inventory[7]-(rasta))+',20\n'
-			line8 = 'skeptic,'+str(inventory[8]-(skeptic))+',20\n'
-			line9 = 'wave,'+str(inventory[9]-(wave))+',20\n'
+			if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
+				line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
+				line2 = 'firm,'+str(inventory[2]-(firm))+',20\n'
+				line3 = 'funny,'+str(inventory[3]-(funny))+',20\n'
+				line4 = 'ganja,'+str(inventory[4]-(ganja))+',20\n'
+				line5 = 'huh,'+str(inventory[5]-(huh))+',20\n'
+				line6 = 'pointer,'+str(inventory[6]-(pointer))+',20\n'
+				line7 = 'rasta,'+str(inventory[7]-(rasta))+',20\n'
+				line8 = 'skeptic,'+str(inventory[8]-(skeptic))+',20\n'
+				line9 = 'wave,'+str(inventory[9]-(wave))+',20\n'
 
-			content = line1+line2+line3+line4+line5+line6+line7+line8+line9
+				content = line1+line2+line3+line4+line5+line6+line7+line8+line9
 		
-			with open ('Inventory.csv', 'w') as wf:
-				wf.write(content)
-			wf.close
-			print "<html>"
-			print"	<head><title>Barack Pics - Bill</title></head>"
-			print "	<body>"
-			print "  <p>"
-			print "  <b>BILL</b><br>"
-			print "  ============================<br>"
-			print "	 B-Baby * " + str(baby) + "  = $" + str(20*(baby)) + "<br>"
-			print "  B Firm * " + str(firm) + " = $" + str(20*(firm))+ "<br>"
-			print "	 B Funny * " + str(funny) + "  = $" + str(20*(funny)) + "<br>"
-			print "  B Ganja? * " + str(ganja) + " = $" + str(20*(ganja))+ "<br>"
-			print "	 Huh? * " + str(huh) + "  = $" + str(20*(huh)) + "<br>"
-			print "  2 the Point * " + str(pointer) + " = $" + str(20*(pointer))+ "<br>"
-			print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(rasta)) + "<br>"
-			print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(skeptic))+ "<br>"
-			print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(wave)) + "<br>"
-			print "  ============================<br>"
-			print "  <b>TOTAL : $" + str( (20*(baby)) + (20*(firm)) + (20*(funny)) + (20*(ganja)) + (20*(huh)) + (20*(pointer)) + (20*(rasta)) + (20*(skeptic)) + (20*(wave)) )+ " CND</b><br>" 
-			print "  THANK YOU FOR YOUR PURCHASE"
-			print "  You have been logged out successfully after your purchase.<br>"
-			print "  Login again if you want to place another order.<br>"
-			print "  </p>"
-			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-			print "  To go back to Login page : " + '<a href="login.html" target="_blank">Login</a><br>'
-			print " </body>"
-			print "</html>"
-		else:
-			print "<html>"
-			print " <head><title>Error</title></head>"
-			print " <body>"
-			print "  <p>"
-			print "  Our apologies. It seems we're out of inventory.<br>"
-			print "  You have been logged out automatically.<br>"
-			print "  Please login again in order to place an order<br>"
-			print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
-			print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
-			print "  </p>"
-			print " </body>"
-			print "</html>"
-	    f.close()
+				with open ('Inventory.csv', 'w') as wf:
+					wf.write(content)
+				wf.close
+				print "<html>"
+				print"	<head><title>Barack Pics - Bill</title></head>"
+				print "	<body>"
+				print "  <p>"
+				print "  <b>BILL</b><br>"
+				print "  ============================<br>"
+				print "	 B-Baby * " + str(baby) + "  = $" + str(20*(baby)) + "<br>"
+				print "  B Firm * " + str(firm) + " = $" + str(20*(firm))+ "<br>"
+				print "	 B Funny * " + str(funny) + "  = $" + str(20*(funny)) + "<br>"
+				print "  B Ganja? * " + str(ganja) + " = $" + str(20*(ganja))+ "<br>"
+				print "	 Huh? * " + str(huh) + "  = $" + str(20*(huh)) + "<br>"
+				print "  2 the Point * " + str(pointer) + " = $" + str(20*(pointer))+ "<br>"
+				print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(rasta)) + "<br>"
+				print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(skeptic))+ "<br>"
+				print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(wave)) + "<br>"
+				print "  ============================<br>"
+				print "  <b>TOTAL : $" + str( (20*(baby)) + (20*(firm)) + (20*(funny)) + (20*(ganja)) + (20*(huh)) + (20*(pointer)) + (20*(rasta)) + (20*(skeptic)) + (20*(wave)) )+ " CND</b><br>" 
+				print "  THANK YOU FOR YOUR PURCHASE"
+				print "  You have been logged out successfully after your purchase.<br>"
+				print "  Login again if you want to place another order.<br>"
+				print "  </p>"
+				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+				print "  To go back to Login page : " + '<a href="login.html" target="_blank">Login</a><br>'
+				print " </body>"
+				print "</html>"
+			else:	
+				print "<html>"
+				print " <head><title>Error</title></head>"
+				print " <body>"
+				print "  <p>"
+				print "  Our apologies. It seems we're out of inventory.<br>"
+				print "  You have been logged out automatically.<br>"
+				print "  Please login again in order to place an order<br>"
+				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
+				print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'
+				print "  </p>"
+				print " </body>"
+				print "</html>"
+		f.close()	
 	
 	else:
 		print "<html>"

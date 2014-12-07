@@ -58,10 +58,10 @@ def main():
 		else:
 			wave = 0	
 
-	with open ('Inventory.csv', 'r') as fp:	
-		for line in fp:
-			line = (line.split(","))
-			inventory.append(int(line[1]))
+		with open ('Inventory.csv', 'r') as fp:	
+			for line in fp:
+				line = (line.split(","))
+				inventory.append(int(line[1]))
 
 		if ((inventory[1]-(baby))>=0)and((inventory[2]-(firm))>=0)and((inventory[3]-(funny))>=0)and((inventory[4]-(ganja))>=0)and((inventory[5]-(huh))>=0)and((inventory[6]-(pointer))>=0)and((inventory[7]-(rasta))>=0)and((inventory[8]-(skeptic))>=0)and((inventory[9]-(wave))>=0):
 			line1 = 'baby,'+str(inventory[1]-(baby))+',20\n'
@@ -117,7 +117,7 @@ def main():
 			print "  </p>"
 			print " </body>"
 			print "</html>"
-		f.close()
+	    f.close()
 	
 	else:
 		print "<html>"

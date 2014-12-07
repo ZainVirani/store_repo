@@ -52,7 +52,7 @@ def main():
 	with open ('Inventory.csv', 'r') as f:	
 		for line in f:
 			line = (line.split(","))
-			inventory.append(int(line[1]))
+			inventory.append(int(line[2]))
 
 		if ((inventory[1]-int(baby))>=0)and((inventory[2]-int(firm))>=0)and((inventory[3]-int(funny))>=0)and((inventory[4]-int(ganja))>=0)and((inventory[5]-int(huh))>=0)and((inventory[6]-int(pointer))>=0)and((inventory[8]-int(skeptic))>=0)and((inventory[9]-int(wave))>=0):
 			line1 = 'baby,'+str(inventory[1]-int(baby))+',20\n'

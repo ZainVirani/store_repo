@@ -17,9 +17,8 @@ def main():
 		for line in logd:
 			line = line.strip()
 			userz.append(line)
-		if (form.has_key("username1") and str(form["username1"].value) in userz):
+		if (form["username"]!=""):
 			log = True
-			print "NIGGER"
 	
 	if (log == True):
 		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):

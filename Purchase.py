@@ -12,7 +12,7 @@ def main():
 	content = ""
 	log = False
 	
-	if (form["username1"].value!="NOT LOGGED IN"):
+	if (form["username1"].value!=""):
 		log = True
 	
 	if (log == True):

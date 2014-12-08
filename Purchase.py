@@ -17,7 +17,7 @@ def main():
 		for line in logd:
 			line = line.strip()
 			userz.append(line)
-		if (form["username"]!=""):
+		if (form["username1"]!=""):
 			log = True
 	
 	if (log == True):

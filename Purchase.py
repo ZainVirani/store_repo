@@ -11,7 +11,7 @@ def main():
 	username = form.getvalue("username1")
 	inventory = []
 	content = ""
-	log = False
+	log = True
 	
 	with open ('LoggedIn.csv', 'r') as logd:
 		users = []		

@@ -13,8 +13,13 @@ def main():
 	content = ""
 	log = False
 	
-	if (username!=""):
-		log = True
+	with open ('LoggedIn.csv', 'r') as logd:
+		users = []		
+		for line in logd:
+			line = line.strip()			
+			users.append(line)
+		if (username in users):
+			log = True			
 	
 	if (log == True):
 		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):
@@ -81,19 +86,18 @@ def main():
 				print "  <p>"
 				print "  <b>BILL</b><br>"
 				print "  ============================<br>"
-				print "	 B-Baby * " + str(baby) + "  = $" + str(20*(baby)) + "<br>"
-				print "  B Firm * " + str(firm) + " = $" + str(20*(firm))+ "<br>"
-				print "	 B Funny * " + str(funny) + "  = $" + str(20*(funny)) + "<br>"
-				print "  B Ganja? * " + str(ganja) + " = $" + str(20*(ganja))+ "<br>"
-				print "	 Huh? * " + str(huh) + "  = $" + str(20*(huh)) + "<br>"
-				print "  2 the Point * " + str(pointer) + " = $" + str(20*(pointer))+ "<br>"
-				print "	 BaRast Obama * " + str(rasta) + "  = $" + str(20*(rasta)) + "<br>"
-				print "  B Skeptical * " + str(skeptic) + " = $" + str(20*(skeptic))+ "<br>"
-				print "	 Good Bye! * " + str(wave) + "  = $" + str(20*(wave)) + "<br>"
+				print "	 B-Baby " + str(baby) + "  = $" + str(20*(baby)) + "<br>"
+				print "  B Firm " + str(firm) + " = $" + str(20*(firm))+ "<br>"
+				print "	 B Funny " + str(funny) + "  = $" + str(20*(funny)) + "<br>"
+				print "  B Ganja? " + str(ganja) + " = $" + str(20*(ganja))+ "<br>"
+				print "	 Huh? " + str(huh) + "  = $" + str(20*(huh)) + "<br>"
+				print "  2 the Point " + str(pointer) + " = $" + str(20*(pointer))+ "<br>"
+				print "	 BaRast Obama " + str(rasta) + "  = $" + str(20*(rasta)) + "<br>"
+				print "  B Skeptical " + str(skeptic) + " = $" + str(20*(skeptic))+ "<br>"
+				print "	 Good Bye! " + str(wave) + "  = $" + str(20*(wave)) + "<br>"
 				print "  ============================<br>"
 				print "  <b>TOTAL : $" + str( (20*(baby)) + (20*(firm)) + (20*(funny)) + (20*(ganja)) + (20*(huh)) + (20*(pointer)) + (20*(rasta)) + (20*(skeptic)) + (20*(wave)) )+ " CND</b><br>" 
 				print "  THANK YOU FOR YOUR PURCHASE"
-				print "  You have been logged out successfully after your purchase.<br>"
 				print "  Login again if you want to place another order.<br>"
 				print "  </p>"
 				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
@@ -106,7 +110,7 @@ def main():
 				print " <body>"
 				print "  <p>"
 				print "  Our apologies. It seems we're out of inventory.<br>"
-				print "  You have been logged out automatically.<br>"
+				print "  You have been logged out.<br>"
 				print "  Please login again in order to place an order<br>"
 				print "  To go back to Home page : " + '<a href="index.html">Home</a><br>'
 				print "  To go back to Login page : " + '<a href="login.html">Login</a><br>'

@@ -77,7 +77,7 @@ int main(){
 			fprintf(fileW, "%s,\n", inputU);
 			fclose(fileW);
 			printf("<body onload=\"submitForm()\">");
-			printf("<form action = \"catalogue.html\" method = \"post\" name=\"myForm\" id=\"myForm\">");
+			printf("<form action = \"catalogue.html\" method = \"get\" name=\"myForm\" id=\"myForm\">");
 			printf("<input id=\"username1\" type = \"hidden\" name = \"username1\" value = \"%s\"><br>", inputU);
 			printf("</form>");
 			printf("<script type='text/javascript'>document.myForm.submit();</script>");

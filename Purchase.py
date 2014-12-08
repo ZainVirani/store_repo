@@ -12,13 +12,8 @@ def main():
 	content = ""
 	log = False
 	
-	with open ('LoggedIn.csv', 'r') as logd:
-		userz = []
-		for line in logd:
-			line = line.strip()
-			userz.append(line)
-		if (form["username1"].value!=""):
-			log = True
+	if (form["username1"].value!="NOT LOGGED IN"):
+		log = True
 	
 	if (log == True):
 		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):

@@ -8,11 +8,12 @@ cgitb.enable()
 def main():
 	print "Content-type: text/html\n"
 	form = cgi.FieldStorage()
+	username = form.getvalue("username1")
 	inventory = []
 	content = ""
 	log = False
 	
-	if (form["username1"].value!=""):
+	if (username!=""):
 		log = True
 	
 	if (log == True):

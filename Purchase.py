@@ -18,7 +18,7 @@ def main():
 			line = line.strip()
 			userz.append(line)
 		if (form.has_key("username1") and str(form["username1"].value) in userz):
-			log = False
+			log = True
 	
 	if (log == True):
 		if ((form.has_key("bbaby")) and (form["bbaby"].value !="") and (form.has_key("baby")) and (form["baby"].value !="")):
